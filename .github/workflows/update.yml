@@ -1,0 +1,30 @@
+name: Update CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+env:
+  TZ: Asia/Shanghai
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+      - run: pip install -r script/requirements.txt
+      - run: mkdir -p json && python script/run.py
+      - uses: test-room-7/action-update-file@v2.0.0
+        with:
+          file-path: json/*.json
+          commit-msg: Update json by CI
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,22 @@
+targets:
+  - name: Qure
+    repo: Koolson/Qure
+    branch: master
+  - name: Qure-Color
+    repo: Koolson/Qure
+    branch: master
+    regex: "IconSet/Color.*"
+  - name: Orz-3-mini
+    description: By Orz-3
+    repo: Orz-3/mini
+    branch: master
+  - name: Orz-3-mini-Alpha
+    description: By Orz-3 (only alpha icons)
+    repo: Orz-3/mini
+    branch: master
+    regex: "Alpha/.*"
+  - name: Orz-3-mini-Color
+    description: By Orz-3 (only color icons)
+    repo: Orz-3/mini
+    branch: master
+    regex: "Color/.*"
