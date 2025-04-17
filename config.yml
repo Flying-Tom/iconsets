@@ -1,8 +1,10 @@
 targets:
   - name: Qure
+    description: Quantumult X Policy Icon Set
     repo: Koolson/Qure
     branch: master
   - name: Qure-Color
+    description: Quantumult X Policy Icon Set (Color)
     repo: Koolson/Qure
     branch: master
     regex: "IconSet/Color.*"
